@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: #4b4339;
+            color: white;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        section{
+            /* border: 2px solid white; */
+            width: 800px;
+            min-width: 320px;
+            min-height: 500px;
+
+            .item{
+                background-color: beige;
+                color: black;
+                margin: 20px 0 ;
+                .title{
+                    background-color: orange;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    padding: 10px;
+                    cursor: pointer;
+                    transition: all .2s ea;
+                    display: flex;
+                    justify-content: space-between;
+                    &:hover{
+                        background-color: rgba(255, 166, 0, 0.726);
+                    }
+                }
+
+
+                .answer{
+                    font-size: 18px;
+                    padding: 10px;
+                    max-height: 0;
+                    display: none;
+                    overflow: hidden;
+                    transition: all 1s  ease-in-out;
+                    p{
+                        line-height: 24px;
+                        color: rgb(58, 57, 57);
+                        font-weight: bolder;
+                    }
+                }
+            }
+
+        }
+
+        section .item .answer.active{
+                    max-height: max-content;
+                    display: block;
+                    overflow: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="item">
+            <div class="title">
+                <h4>question 1</h4>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer answer1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero hic expedita nihil. Voluptas eius minus porro aliquam nam illum quas tenetur vero aliquid.</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="title">
+                <h4>question 2</h4>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer answer2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa officia laudantium fugiat iusto, expedita magnam facere omnis, quasi ex exercitationem magni blanditiis odio. Quidem praesentium dolorem autem officia quos doloremque, consectetur porro, tempora soluta exercitationem ab. Delectus laborum officia dolorem unde ut error vitae dolore perspiciatis odit excepturi commodi iste, voluptas sunt suscipit esse!.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="title">
+                <h4>question 3</h4>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer answer3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa officia laudantium fugiat iusto, expedita magnam facere omnis, quasi ex exercitationem magni blanditiis odio. Quidem praesentium dolorem autem officia quos doloremque, consectetur porro, tempora soluta exercitationem ab. Delectus laborum officia dolorem unde ut error vitae dolore perspiciatis odit excepturi commodi iste, voluptas sunt suscipit esse!.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="title">
+                <h4>question 4</h4>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="answer answer4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa officia laudantium fugiat iusto, expedita magnam facere omnis, quasi ex exercitationem magni blanditiis odio. Quidem praesentium dolorem autem officia quos doloremque, consectetur porro, tempora soluta exercitationem ab. Delectus laborum officia dolorem unde ut error vitae dolore perspiciatis odit excepturi commodi iste, voluptas sunt suscipit esse!.</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./script.js"></script>
+</html>
